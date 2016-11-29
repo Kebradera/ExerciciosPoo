@@ -42,4 +42,9 @@ public class VetorDeChar {
         }
         return totalVogais;
     }
+    
+    /**
+     * b. um método que retorne o número palavras iguais na frase.
+     */
+    
 }
