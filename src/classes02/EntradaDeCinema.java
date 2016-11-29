@@ -78,7 +78,7 @@ public class EntradaDeCinema {
     public void setValor(float valor) {
         this.valor = valor;
     }
-    public EntradaDeCinema(Date dataDoFilme,float horario,int sala,float valor ){
+    public void EntradaDeCinema(Date dataDoFilme,float horario,int sala,float valor ){
         setDataDoFilme(dataDoFilme);
         setHorario(horario);
         setSala(sala);

@@ -5,7 +5,7 @@
  */
 package classes02;
 
-import javax.swing.JOptionPane;
+import utilidades.Msg;
 
 /**
  *
@@ -72,7 +72,7 @@ public class CalcSimples {
     public void setResultado(double resultado) {
         this.resultado = resultado;
     }
-    public CalcSimples(double num1,double num2,char oper){
+    public void CalcSimples(double num1,double num2,char oper){
         setNumero1(num1);
         setNumero2(num2);
         setOperador(oper);
@@ -84,6 +84,9 @@ public class CalcSimples {
         } else if (getOperador() == '-') {
             setResultado(getNumero1() - getNumero2());
         } else if (getOperador() == '/') {
+            if(getNumero2() == 0){
+                Msg.mostra("Divisão por 0 não aceita!");
+            }
             setResultado(getNumero1() / getNumero2());
         } else if (getOperador() == '*') {
             setResultado(getNumero1() - getNumero2());
@@ -92,5 +95,6 @@ public class CalcSimples {
     public double imprimirResultado(){
         return getResultado();
     }
+   
     
 }

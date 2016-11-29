@@ -5,6 +5,7 @@
  */
 package utilidades;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -297,5 +298,73 @@ public static int getDaysOfInterval(String dataInit, String dataFinish) {
         mes[11] = 31;
         return mes[month - 1];
     }
-    }*/
+     * @return 
+     * @throws java.lang.Exception}*/
+    
+     //retorna o dia da semana dada uma data
+  public String retornarDiaSemana() throws Exception
+  {
+      dataPassada();
+    Calendar calendario = new GregorianCalendar(ano, mes - 1, dia);
+    int diaSemana = calendario.get(Calendar.DAY_OF_WEEK);
+ 
+    return pesquisarDiaSemana(diaSemana);
+  }
+ 
+ //faz a pesquisa, dado um inteiro de 1 a 7
+  public String pesquisarDiaSemana(int _diaSemana)
+  {
+    String diaSemana = null;
+    String diaUtil = null;
+ 
+    switch (_diaSemana)
+    {
+ 
+    case 1:
+    {
+      diaSemana = "Domingo";
+      diaUtil = "Fim de semana";
+      break;
+    }
+    case 2:
+    {
+      diaSemana = "Segunda";
+      diaUtil = "Dia útil";
+      break;
+    }
+    case 3:
+    {
+      diaSemana = "Terça";
+      diaUtil = "Dia útil";
+      break;
+    }
+    case 4:
+    {
+      diaSemana = "Quarta";
+      diaUtil = "Dia útil";
+      break;
+    }
+    case 5:
+    {
+      diaSemana = "Quinta";
+      diaUtil = "Dia útil";
+      break;
+    }
+    case 6:
+    {
+      diaSemana = "Sexta";
+      diaUtil = "Dia útil";
+      break;
+    }
+    case 7:
+    {
+      diaSemana = "Sábado";
+      diaUtil = "Fim de semana";
+      break;
+    }
+ 
+    }
+    return (diaSemana+" - "+diaUtil);
+ 
+  }
 }
