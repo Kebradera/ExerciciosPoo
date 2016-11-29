@@ -5,8 +5,8 @@
  */
 package exerciciospoo;
 
-import classes01.OperacoesNumeros;
-import classes02.EntradaDeCinema;
+import ClassesLista01.OperacoesNumeros;
+import ClassesLista02.EntradaDeCinema;
 import static java.lang.Integer.parseInt;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
