@@ -124,7 +124,10 @@ public class SetorPessoal {
                         funcionario2[cont2+1] = aux[0];
                     }
                 }
-            }            
+            }
+        for(int ord =0; ord<funcionario2.length; ord++){
+            Msg.mostra(funcionario2[ord].getNome()+" - "+funcionario2[ord].getSalario());
+        }
     }
     
 
