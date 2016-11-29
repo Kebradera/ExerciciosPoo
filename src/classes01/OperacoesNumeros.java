@@ -13,7 +13,7 @@ import utilidades.Msg;
  */
 public class OperacoesNumeros {
 
-    public void comparacao() {
+    public static void comparacao() {
         Msg.mostra("Lista 01 - questão 01");
         Integer num = Msg.pedeNumero("Informe um numero: ");
         if (num > 10) {
