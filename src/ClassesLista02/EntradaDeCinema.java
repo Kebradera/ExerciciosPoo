@@ -5,6 +5,7 @@
  */
 package ClassesLista02;
 
+import ClassesLista01.Data;
 import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JOptionPane;
@@ -30,19 +31,19 @@ import utilidades.Msg;
  */
 public class EntradaDeCinema {
 
-    private Date dataDoFilme;
+    private Data dataDoFilme;
     private float horario;
     private int sala;
     private float valor;
 
     /**
-     *
+     *Construtor para iniciar os atributos.
      * @param dataDoFilme
      * @param horario
      * @param sala
      * @param valor
      */
-    public void EntradaDeCinema(Date dataDoFilme, float horario, int sala, float valor) {
+    public void EntradaDeCinema(Data dataDoFilme, float horario, int sala, float valor) {
         setDataDoFilme(dataDoFilme);
         setHorario(horario);
         setSala(sala);
@@ -112,8 +113,8 @@ public class EntradaDeCinema {
      * 4. Desenvolva uma aplicação que leia os dados necessários para instanciar
      * e imprimir o ingresso para clientes normais, menores de 12 anos e
      * estudantes. no main:
-     *EntradaDeCinema(Date dataDoFilme, float horario, int sala, float valor);
-     * if(getCarteira()=0){
+     *EntradaDeCinema ent = new EntradaDeCinema(Date dataDoFilme, float horario, int sala, float valor);
+     * if(ent.getCarteira()=0){
      *  calculaDesconto(getDataNasc());
      *  descontoDeHorario(getHorario());
      * }else{
@@ -125,14 +126,14 @@ public class EntradaDeCinema {
     /**
      * @return the dataDoFilme
      */        
-    public Date getDataDoFilme() {
+    public Data getDataDoFilme() {
         return dataDoFilme;
     }
 
     /**
      * @param dataDoFilme the dataDoFilme to set
      */
-    public void setDataDoFilme(Date dataDoFilme) {
+    public void setDataDoFilme(Data dataDoFilme) {
         this.dataDoFilme = dataDoFilme;
     }
 

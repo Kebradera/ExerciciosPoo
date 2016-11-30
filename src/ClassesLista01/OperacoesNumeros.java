@@ -36,24 +36,28 @@ public class OperacoesNumeros {
      * se o número for igual a 1; b. “quase”, se o número for igual a 2; c.
      * “tchau”, se o número for igual a 3;
      */
-    public void numeroMensagem() {
+    public static void numeroMensagem() {
         Msg.mostra("Lista 01 - questão 02");
         Integer num = Msg.pedeNumero("Informe um numero de 1 a 3: ");
+        String mensagem = null;
         while (num != 999) {
-            while (num < 1 || num > 3) {
+            if (num < 1 || num > 3) {
                 num = Msg.pedeNumero("NUMERO INVALIDO,DIGITE UM NUMERO ENTRE 1 E 3: ");
+            } else {
                 switch (num) {
                     case 1:
-                        Msg.mostra("Ola!");
+                        mensagem = "Ola!";
                         break;
                     case 2:
-                        Msg.mostra("Quase");
+                        mensagem = "Quase";
                         break;
-                    default:
-                        Msg.mostra("Tchau");
+                    case 3:
+                        mensagem = "Tchau";
+                        break;
                 }
-                num = Msg.pedeNumero("Informe outro numero de 1 a 3,ou 999 para sair");
             }
+            Msg.mostra(mensagem);
+            num = Msg.pedeNumero("Informe outro numero de 1 a 3,ou 999 para sair");
         }
     }
 
@@ -108,32 +112,63 @@ public class OperacoesNumeros {
     }
 
     /**
-     *9. Faça um programa que irá calcular a média entre dois números informados.
-     * Considere que qualquer número dividido por zero é igual a zero.
+     * 9. Faça um programa que irá calcular a média entre dois números
+     * informados. Considere que qualquer número dividido por zero é igual a
+     * zero.
      */
-    
-    
+    public void media2Numeros() {
+        Integer num1 = Msg.pedeNumero("Informe o primeiro número: ");
+        Integer num2 = Msg.pedeNumero("Informe o segundo número: ");
+        int quant = 0;
+        Integer somaNumeros = 0;
+        double mediaNumeros = 0;
+        for (int cont = num1; cont <= num2; cont++) {
+            somaNumeros += cont;
+            quant++;
+        }
+        Msg.mostra("A média entre os números " + num1 + " e " + num2 + " é " + (mediaNumeros = somaNumeros / quant));
+    }
+
     /**
      * 10. Faça um programa que irá informar se um dado número é impar ou par.
      */
-    
-    
+    public void imparOuPar() {
+        Integer num1 = Msg.pedeNumero("Informe o primeiro número: ");
+        if (num1 % 2 == 0) {
+            Msg.mostra("O número " + num1 + " é par.");
+        } else {
+            Msg.mostra("O número " + num1 + " é ímpar.");
+        }
+    }
+
     /**
      * 11. Faça um programa que irá informar se um número é primo ou não.
      */
-    
-    
+    public static void verificarPrimo() {
+        Integer num = Msg.pedeNumero("Informe um numero: ");
+        Integer dividido = 0;
+        for (int cont = 1; cont <= num; cont++) {
+            if (num % cont == 0) {
+                dividido++;
+            }
+        }
+        if (dividido <= 2) {
+            Msg.mostra("Este número é PRIMO");
+        } else {
+            Msg.mostra("Este número não é Primo");
+        }
+    }
+
+    /**
+     * 11. Faça um programa que irá informar se um número é primo ou não.
+     */
     /**
      * 13. Faça um programa que exiba a tabela abaixo
-     *01.02.03.04.05.06.07.08.09.10
-     *02.04.06.08.10.12.14.16.18.20
-     *03.06.09.12.15.18.21.24.27.30
-     *04.08.12.16.20.24.28.32.36.40
-     *05.10.15.20.25.30.35.40.45.50
-     *06.12.18.24.30.36.42.48.54.60
-     *07.14.21.28.35.42.49.56.63.70
-     *08.16.24.32.40.48.56.64.72.80
-     *09.18.27.36.45.54.63.72.81.90
-     *10.20.30.40.50.60.70.80.90.100
+     * 01.02.03.04.05.06.07.08.09.10 02.04.06.08.10.12.14.16.18.20
+     * 03.06.09.12.15.18.21.24.27.30 04.08.12.16.20.24.28.32.36.40
+     * 05.10.15.20.25.30.35.40.45.50 06.12.18.24.30.36.42.48.54.60
+     * 07.14.21.28.35.42.49.56.63.70 08.16.24.32.40.48.56.64.72.80
+     * 09.18.27.36.45.54.63.72.81.90 10.20.30.40.50.60.70.80.90.100
      */
+    
 }

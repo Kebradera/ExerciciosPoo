@@ -20,6 +20,11 @@ public class Funcionario {
     
     /**
      * Construtor para inicializar os atributos.
+     * @param matricula
+     * @param nome
+     * @param departamento
+     * @param salario
+     * @param funcao
      */
     public void Funcionario(int matricula,String nome,int departamento,float salario,String funcao){
         setMatricula(matricula);

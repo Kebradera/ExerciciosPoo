@@ -25,26 +25,40 @@ public class VetorDeChar {
      * @param frase
      */
     public void VetorDeChar(String frase) {
+        vetor = new char[1];
         vetor = frase.toCharArray();
     }
 
     /**
      * a. um método que retorne o número de vogais existentes na frase.
+     *
+     * @return
      */
     public Integer numeroDeVogais() {
         String vogais = "aeiou";
         int totalVogais = 0;
-        int NumeroLetras = vetor.length;
-        for (int cont = 0; cont < NumeroLetras; cont++) {
+        for (int cont = 0; cont < vetor.length; cont++) {
             if (vogais.indexOf(vetor[cont]) >= 0) {
                 totalVogais++;
             }
         }
         return totalVogais;
     }
-    
+
     /**
      * b. um método que retorne o número palavras iguais na frase.
      */
-    
+    /**public Integer contaPalavras() {
+        int quant = 0;
+        char[] texto = vetor;
+        String[] arrayString = new String[1];
+        arrayString = texto.split(" ");
+        for (int i = 0; i < arrayString.length; i++) {
+            if (arrayString[i].equals(palavra)) {
+                quant++;
+            }
+        }
+        return quant;
+
+    }*/
 }

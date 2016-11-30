@@ -21,11 +21,10 @@ public class ExerciciosPOO {
 
     /**
      * @param args the command line arguments
-     * @throws java.text.ParseException
      */
     public static void main(String[] args){
         // TODO code application logic here
-        OperacoesNumeros.comparacao();
+        OperacoesNumeros.numeroMensagem();
     }
 
 }
