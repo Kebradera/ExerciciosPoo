@@ -159,9 +159,7 @@ public class OperacoesNumeros {
         }
     }
 
-    /**
-     * 11. Faça um programa que irá informar se um número é primo ou não.
-     */
+   
     /**
      * 13. Faça um programa que exiba a tabela abaixo
      * 01.02.03.04.05.06.07.08.09.10 02.04.06.08.10.12.14.16.18.20
@@ -170,5 +168,11 @@ public class OperacoesNumeros {
      * 07.14.21.28.35.42.49.56.63.70 08.16.24.32.40.48.56.64.72.80
      * 09.18.27.36.45.54.63.72.81.90 10.20.30.40.50.60.70.80.90.100
      */
-    
+    public void tabela(){
+        for(int cont1 = 0; cont1 <= 10; cont1++){
+            for(int cont2 = 0; cont2 <= 10; cont2++ ){
+                Msg.mostra((cont1*cont2)+".");
+            }
+        }
+    }
 }

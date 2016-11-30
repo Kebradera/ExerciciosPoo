@@ -42,7 +42,7 @@ public class Primos {
     public void intervaloPrimo(Integer num1,Integer num2){
         do {            
             num1 = Msg.pedeNumero("Digite o primeiro número: ");
-            num2 = Msg.pedeNumero("Digite o primeiro número: ");
+            num2 = Msg.pedeNumero("Digite o segundo número: ");
             if(num1 <= num2){
                 Msg.mostra("O primeiro número não pode ser menor que o segundo.");
             }

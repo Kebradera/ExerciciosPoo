@@ -48,7 +48,7 @@ public class CalcSimples {
             }
             resultado = (getNumero1() / getNumero2());
         } else if (getOperador() == '*') {
-            resultado = (getNumero1() - getNumero2());
+            resultado = (getNumero1() * getNumero2());
         }
         imprimirResultado(resultado);
     }

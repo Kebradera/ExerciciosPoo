@@ -54,7 +54,6 @@ public class Data {
      * 7. Faça um programa que irá receber uma data de nascimento e informará a
      * qual signo pertence.
      *
-     * @return
      * @throws Exception
      */
     public void qualSigno() throws Exception {
@@ -150,7 +149,6 @@ public class Data {
      * @return
      * @throws java.lang.Exception}
      */
-
     //retorna o dia da semana dada uma data
     /**
      * 12. Faça um programa que irá informar o dia da semana de uma data
@@ -295,11 +293,10 @@ public class Data {
     }
 
     /**
-     * Lista 02_Questão 05. 
-     * Construa a classe Data para que essa possua um método chamado “retornaMes”, 
-     * que ao ser passado uma determinada data (do tipo Date) retorne uma String 
-     * indicando o mês do ano da data passada como parâmetro. Use o comando switch 
-     * para resolver o exercício.
+     * Lista 02_Questão 05. Construa a classe Data para que essa possua um
+     * método chamado “retornaMes”, que ao ser passado uma determinada data (do
+     * tipo Date) retorne uma String indicando o mês do ano da data passada como
+     * parâmetro. Use o comando switch para resolver o exercício.
      */
     public void converteMes() {
         switch (getMes()) {
